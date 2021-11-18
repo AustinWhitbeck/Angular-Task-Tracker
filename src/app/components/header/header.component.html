@@ -1,0 +1,15 @@
+<header>
+    <!-- this is an example of interpolating from the component. The 'title' variable -->
+    <h1>{{ title }}</h1>
+
+    <!-- within the app-button, which is an imported component.
+        there is the "props" where we are stating what the props are that
+        we are passing into the button component.
+        Such as, what the event is on click, the text string, what color
+    -->
+    <app-button 
+        color="blue" 
+        text="Click" 
+        (btnClick)="toggleAddTask()"
+    ></app-button>
+</header>
