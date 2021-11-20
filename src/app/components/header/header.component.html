@@ -7,9 +7,15 @@
         we are passing into the button component.
         Such as, what the event is on click, the text string, what color
     -->
+
+    <!-- 
+        using the *ngIf, this has a function set up in the component.ts file that checks if the current route is equal to x, then display the app button
+        If it's not equal to that, then don't display it. (only display on the page with the Tasks)
+     -->
     <app-button 
-        color="blue" 
-        text="Click" 
+        *ngIf="hasRoute('/')"
+        color="{{showAddTask ? 'red' : 'green'}}" 
+        text="{{showAddTask ? 'Hide' : 'Show'}}"
         (btnClick)="toggleAddTask()"
     ></app-button>
 </header>
